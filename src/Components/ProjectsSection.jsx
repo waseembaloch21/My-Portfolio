@@ -8,7 +8,7 @@ const projects = [
   {
     title: "Events App",
     description:
-      "A web-based application to manage events records , developed using Next.js.",
+      "The Event App is a modern, responsive web application designed to help users discover, create, and manage events effortlessly.",
     image: EventsApp,
     link: "https://findfriend.vercel.app/",
     technologies: ["Next.Js", "Tailwind.CSS"],
@@ -16,7 +16,7 @@ const projects = [
   {
     title: "Furniture Web",
     description:
-      "A professional website designed for a funiro web, focusing on modern UI and user experience.",
+      "Furniture Web is a modern and responsive e-commerce website designed for browsing and purchasing furniture online. ",
     image: Furniture,
     link: "https://furniture-web-beta.vercel.app/",
     technologies: ["React.js", "Tailwind.CSS"],
@@ -24,7 +24,7 @@ const projects = [
   {
     title: "Todo App",
     description:
-      "An e-commerce platform showcasing digital assets with features like product listing and responsive design.",
+      "The Todo App is a user-friendly and interactive web application designed to help users manage their daily tasks effectively. ",
     image: TodoApp,
     link: "https://todo-app-seven-silk-87.vercel.app/",
     technologies: ["React.js", "Tailwind.CSS"],
@@ -32,9 +32,9 @@ const projects = [
   {
     title: "Weather-App",
     description:
-      "A modern and sleek website designed for a travel agency, highlighting their services and destinations.",
+      "The Weather App is a responsive web application that provides real-time weather updates for any location worldwide. ",
     image: WeatherApp,
-    link: "",
+    link: "https://weather-app-two-phi-91.vercel.app/",
     technologies: ["React.js", "Tailwind.CSS"],
   },
 ];
