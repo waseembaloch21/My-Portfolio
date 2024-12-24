@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import MyLogo from '../assets/images/Logo.jpeg';
 import { TiSocialLinkedin } from "react-icons/ti";
 import { FaTwitter } from "react-icons/fa";
@@ -12,16 +12,30 @@ import { FaFigma } from 'react-icons/fa';
 import { SiBootstrap } from 'react-icons/si';
 import { FaGit } from 'react-icons/fa';
 import resume from '../assets/images/Waseem resume.pdf';
+import Typed from 'typed.js';
 
 const Hero = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const typedElementRef = useRef(null);
+
+    useEffect(() => {
+        const typed = new Typed(typedElementRef.current, {
+            strings: ["Front-End Developer", "Web Developer", "Responsive Designer"],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true,
+        });
+        return () => {
+            typed.destroy();
+        };
+    }, []);
 
     return (
         <div className='flex flex-col md:flex-row justify-between items-center font-poppins gap-5 md:gap-20 px-5'>
             {/* Left - Content */}
             <div className='text-center md:text-left'>
                 <h1 className='text-3xl md:text-5xl font-bold mb-2 md:mb-4'>Waseem Baloch</h1>
-                <h3 className='text-xl md:text-2xl font-semibold text-gray-300 mb-4'>Front-End Developer</h3>
+                <h3 ref={typedElementRef} className='text-xl md:text-2xl font-semibold text-gray-300 mb-4'></h3>
                 <p className='text-gray-400 leading-7 mb-6'>I create beautiful, responsive, and user-friendly web interfaces using modern frontend technologies.</p>
                 <button 
                     onClick={() => setIsModalOpen(true)} 
