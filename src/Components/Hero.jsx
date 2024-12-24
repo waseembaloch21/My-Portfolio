@@ -9,9 +9,9 @@ import { SiJavascript } from 'react-icons/si';
 import { SiHtml5 } from 'react-icons/si';
 import { SiCss3 } from 'react-icons/si';
 import { FaFigma } from 'react-icons/fa';
-
 import { SiBootstrap } from 'react-icons/si';
 import { FaGit } from 'react-icons/fa';
+import resume from '../assets/images/Waseem resume.pdf';
 
 const Hero = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,10 +25,17 @@ const Hero = () => {
                 <p className='text-gray-400 leading-7 mb-6'>I create beautiful, responsive, and user-friendly web interfaces using modern frontend technologies.</p>
                 <button 
                     onClick={() => setIsModalOpen(true)} 
-                    className="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 hover:scale-105 transform transition"
+                    className="cv"
                 >
                     About Me
                 </button>
+                <a href={resume} download>
+                <button  
+                    className="cv"
+                >
+                  Download CV
+                </button>
+                </a>
             </div>
 
             {/* Mid - Image */}

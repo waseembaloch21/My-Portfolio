@@ -8,19 +8,19 @@ const Testimonials = () => {
     {
       name: "Saif",
       role: "Full Stack Developer",
-      message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iure minus veritatis voluptas tempora architecto nobis voluptates totam illum sunt? Minus asperiores fuga quae sequi placeat pariatur modi explicabo consectetur?",
+      message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iure minus veritatis voluptas tempora architecto nobis voluptates totam illum sunt? Minus asperiores fuga quae sequi placeat pariatur modi explicabo consectetur",
       img: Saif
     },
     {
       name: "Adnan",
       role: "Full Stack Developer",
-      message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iure minus veritatis voluptas tempora architecto nobis voluptates totam illum sunt? Minus asperiores fuga quae sequi placeat pariatur modi explicabo consectetur?",
+      message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iure minus veritatis voluptas tempora architecto nobis voluptates totam illum sunt? Minus asperiores fuga quae sequi placeat pariatur modi explicabo consectetur",
       img: Adnan,
     },
     {
       name: "Taif ",
       role: "Frontend Developer",
-      message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iure minus veritatis voluptas tempora architecto nobis voluptates totam illum sunt? Minus asperiores fuga quae sequi placeat pariatur modi explicabo consectetur?",
+      message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iure minus veritatis voluptas tempora architecto nobis voluptates totam illum sunt? Minus asperiores fuga quae sequi placeat pariatur modi explicabo consectetur",
       img: Taif
     },
   ];

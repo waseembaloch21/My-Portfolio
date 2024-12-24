@@ -114,7 +114,7 @@ const Contact = () => {
                         </div>
                         <button
                             type="submit"
-                            className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-lg flex items-center w-full justify-center text-center"
+                            className="bg-cyan-300 hover:bg-cyan-600 text-black py-2 px-6 rounded-lg flex items-center w-full justify-center text-center"
                         >
                             <FaPaperPlane className="mr-2" />
                             Send Message

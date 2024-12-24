@@ -61,7 +61,7 @@ const ProjectsSection = () => {
                 {project.technologies.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="bg-blue-600 text-white text-xs font-medium py-1 px-3 rounded-full"
+                    className="bg-cyan-300 text-black text-xs font-medium py-1 px-3 rounded-full"
                   >
                     #{tech}
                   </span>
@@ -71,7 +71,7 @@ const ProjectsSection = () => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-center bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600 transition"
+                className="block text-center bg-cyan-300 text-black py-3 px-6 rounded-lg hover:bg-cyan-600 transition"
               >
                 View Project
               </a>

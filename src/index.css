@@ -8,27 +8,44 @@ body{
     overflow-x: hidden;
     
 }
+.cv {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #3affff; 
+  color: #000; 
+  border: none; 
+  border-radius: 25px;
+  padding: 12px 25px; 
+  font-size: 1rem; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s;
+  width: auto; 
+  margin: auto; 
+  margin-left: 3%;
+  max-width: 300px; 
+}
 
 
-/* Dark Mode Scrollbar */
+
+
+
 ::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+    width: 12px; 
   }
   
   ::-webkit-scrollbar-track {
-    background: #2c2f36; /* Track background */
-    /* border-radius: 10px; */
+    background: #2c2f36; 
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: #444c56; /* Thumb (draggable part) background color */
+    background-color: #444c56; 
     border-radius: 10px;
-    border: 2px solid #2c2f36; /* Border around the thumb */
-    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+    border: 2px solid #2c2f36; 
+    transition: background-color 0.3s ease-in-out;
   }
   
-  /* Hover effect for the scrollbar */
+ 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #636b74; /* Lighter color on hover */
+    background-color: #636b74; 
   }
   
