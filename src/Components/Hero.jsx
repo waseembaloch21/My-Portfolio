@@ -20,7 +20,7 @@ const Hero = () => {
 
     useEffect(() => {
         const typed = new Typed(typedElementRef.current, {
-            strings: ["Front-End Developer", "Web Developer", "Responsive Designer"],
+            strings: ["Front-End Developer", "Web Developer", "Responsive Designer", ],
             typeSpeed: 50,
             backSpeed: 30,
             loop: true,
@@ -35,7 +35,7 @@ const Hero = () => {
             {/* Left - Content */}
             <div className='text-center md:text-left'>
                 <h1 className='text-3xl md:text-5xl font-bold mb-2 md:mb-4'>Waseem Baloch</h1>
-                <h3 ref={typedElementRef} className='text-xl md:text-2xl font-semibold text-gray-300 mb-4'></h3>
+               <span className='sm:text-3xl md:text-5xl'>I am</span> &nbsp;  <span ref={typedElementRef} className='sm:text-4xl md:text-5xl font-semibold text-gray-300'></span>
                 <p className='text-gray-400 leading-7 mb-6'>I create beautiful, responsive, and user-friendly web interfaces using modern frontend technologies.</p>
                 <button 
                     onClick={() => setIsModalOpen(true)} 
