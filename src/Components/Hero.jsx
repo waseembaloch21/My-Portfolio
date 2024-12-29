@@ -20,7 +20,7 @@ const Hero = () => {
 
     useEffect(() => {
         const typed = new Typed(typedElementRef.current, {
-            strings: ["Front-End Developer", "Web Developer", "Responsive Designer", ],
+            strings: ["FrontEnd Developer", "Web Developer", "Responsive Designer",],
             typeSpeed: 50,
             backSpeed: 30,
             loop: true,
@@ -34,21 +34,23 @@ const Hero = () => {
         <div className='flex flex-col md:flex-row justify-between items-center font-poppins gap-5 md:gap-20 px-5'>
             {/* Left - Content */}
             <div className='text-center md:text-left'>
-                <h1 className='text-3xl md:text-5xl font-bold mb-2 md:mb-4'>Waseem Baloch</h1>
-               <span className='sm:text-3xl md:text-5xl'>I am</span> &nbsp;  <span ref={typedElementRef} className='sm:text-4xl md:text-5xl font-semibold text-gray-300'></span>
-                <p className='text-gray-400 leading-7 mb-6'>I create beautiful, responsive, and user-friendly web interfaces using modern frontend technologies.</p>
-                <button 
-                    onClick={() => setIsModalOpen(true)} 
+                <h1 className='text-3xl md:text-5xl font-serif font-bold mb-2 md:mb-4'>Hy!I AM</h1>
+                <span className='sm:text-3xl text-cyan-300 font-bold font-serif md:text-5xl'>Waseem Baloch</span><br />
+                
+                <h1 className='font-serif text-3xl'>Passionate</h1><span ref={typedElementRef} className='sm:text-4xl text-cyan-300 font-serif md:text-5xl font-semibold'></span>
+                <p className='text-gray-400 font-serif leading-7 mb-6'>I am design a beautiful, responsive, and user-friendly web interfaces with modern frontend technologies.</p>
+                <button
+                    onClick={() => setIsModalOpen(true)}
                     className="cv"
                 >
                     About Me
                 </button>
                 <a href={resume} download>
-                <button  
-                    className="cv"
-                >
-                  Download CV
-                </button>
+                    <button
+                        className="cv"
+                    >
+                        Download CV
+                    </button>
                 </a>
             </div>
 
@@ -61,7 +63,7 @@ const Hero = () => {
                     <TiSocialLinkedin />
                 </a>
 
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-3xl hover:text-blue-400 cursor-pointer transition transform hover:scale-110">
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-3xl hover:text-blue-400 cursor-pointer transition transform hover:scale-110">
                     <FaTwitter />
                 </a>
 
@@ -76,8 +78,8 @@ const Hero = () => {
                     <div className="bg-gray-900 text-white rounded-lg shadow-lg p-8 w-11/12 md:w-2/3 lg:w-1/2 relative flex flex-col md:flex-row gap-8">
                         {/* Left - Information */}
                         <div className="flex-1">
-                            <button 
-                                onClick={() => setIsModalOpen(false)} 
+                            <button
+                                onClick={() => setIsModalOpen(false)}
                                 className="absolute top-4 right-4 text-gray-400 hover:text-gray-200 text-4xl"
                             >
                                 &times;
@@ -87,33 +89,33 @@ const Hero = () => {
                                 I am a passionate Front-End Developer specialized in creating responsive and user-friendly web interfaces. My core skills include:
                             </p>
                             <div className='flex justify-center items-center'>
-                            <ul className="list-disc list-inside text-gray-400 mb-4">
-                                <li className="flex items-center gap-2 text-blue-600 text-2xl"><FaReact /> React.js</li>
-                                <li className="flex items-center gap-2 text-blue-400 text-2xl"><SiTailwindcss /> Tailwind CSS</li>
-                                <li className="flex items-center gap-2 text-yellow-400 text-2xl"><SiJavascript /> JavaScript</li>
-                                <li className="flex items-center gap-2 text-orange-500 text-2xl"><SiHtml5 /> HTML5</li>
-                                <li className="flex items-center gap-2 text-blue-500 text-2xl"><SiCss3 /> CSS3</li>
-                                <li className="flex items-center gap-2 text-purple-600 text-2xl"><FaFigma /> Figma</li>
-                                <li className="flex items-center gap-2 text-indigo-600 text-2xl"><SiBootstrap /> Bootstrap</li>
-                                <li className="flex items-center gap-2 text-gray-600 text-2xl"><FaGit /> Git & GitHub</li>
-                            </ul>
+                                <ul className="list-disc list-inside text-gray-400 mb-4">
+                                    <li className="flex items-center gap-2 text-blue-600 text-2xl"><FaReact /> React.js</li>
+                                    <li className="flex items-center gap-2 text-blue-400 text-2xl"><SiTailwindcss /> Tailwind CSS</li>
+                                    <li className="flex items-center gap-2 text-yellow-400 text-2xl"><SiJavascript /> JavaScript</li>
+                                    <li className="flex items-center gap-2 text-orange-500 text-2xl"><SiHtml5 /> HTML5</li>
+                                    <li className="flex items-center gap-2 text-blue-500 text-2xl"><SiCss3 /> CSS3</li>
+                                    <li className="flex items-center gap-2 text-purple-600 text-2xl"><FaFigma /> Figma</li>
+                                    <li className="flex items-center gap-2 text-indigo-600 text-2xl"><SiBootstrap /> Bootstrap</li>
+                                    <li className="flex items-center gap-2 text-gray-600 text-2xl"><FaGit /> Git & GitHub</li>
+                                </ul>
 
-                            {/* Right - Image */}
-                        <div className="flex-1 flex justify-center items-center">
-                            <img 
-                                className=" hidden sm:block w-60 h-60 rounded-full border-4 border-gray-200 shadow-lg" 
-                                src={MyLogo} 
-                                alt="Waseem Baloch" 
-                            />
-                        </div>
-                        </div>
+                                {/* Right - Image */}
+                                <div className="flex-1 flex justify-center items-center">
+                                    <img
+                                        className=" hidden sm:block w-60 h-60 rounded-full border-4 border-gray-200 shadow-lg"
+                                        src={MyLogo}
+                                        alt="Waseem Baloch"
+                                    />
+                                </div>
+                            </div>
 
                             <p className="text-gray-300">
                                 <strong>Education:</strong> Self-learning.
                             </p>
                         </div>
 
-                        
+
                     </div>
                 </div>
             )}

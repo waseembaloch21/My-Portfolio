@@ -5,7 +5,7 @@ import BackgroundCanvas from './BackgroundCanvas';
 
 const HeaderSection = () => {
   return (
-    <header className='h-screen flex flex-col relative'>
+    <header className='h-screen  flex flex-col relative'>
       {/* Background Canvas */}
       {/* <BackgroundCanvas /> */}
       <div>

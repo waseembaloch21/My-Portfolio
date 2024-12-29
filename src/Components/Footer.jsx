@@ -16,10 +16,10 @@ const Footer = () => {
 
     emailjs
       .send(
-        'service_ijsugv2', // Replace with your EmailJS service ID
-        'template_jcw3dxg', // Replace with your EmailJS template ID
-        { email }, // Data to send
-        'dxlIerXfEdTyPTsYl' // Replace with your EmailJS public key
+        'service_ijsugv2',
+        'template_jcw3dxg',
+        { email },
+        'dxlIerXfEdTyPTsYl'
       )
       .then(() => {
         setMessage('Subscription successful! Thank you.');
@@ -34,15 +34,15 @@ const Footer = () => {
     <footer id='footer' className="bg-[#121212] text-white py-10">
       <div className="container mx-auto px-5 md:px-20">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start">
-          {/* Logo and Description */}
+
           <div className="mb-6 md:mb-0 md:w-1/3">
             <h2 className="text-2xl font-bold mb-3">Waseem Baloch</h2>
             <p className="text-gray-400">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error commodi ut animi provident, nulla explicabo! Atque, quam. Pariatur, repellendus consectetur vero, nostrum, voluptatibus mollitia labore aliquid architecto consequatur ullam a?
+              I am a passionate Front-End Developer specialized in creating responsive and user-friendly web interfaces.
             </p>
           </div>
 
-          {/* Links Section */}
+
           <div className="flex md:w-1/3 md:justify-around mb-6 md:mb-0 gap-4">
             <div>
               <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
@@ -72,7 +72,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Newsletter Subscription */}
+
           <div className="md:w-1/3">
             <h3 className="text-lg font-semibold mb-3">Subscribe to my updates</h3>
             <form onSubmit={handleSubscription} className="flex flex-col space-y-2">
@@ -100,11 +100,11 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Waseem Baloch. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            
+
             <a href="https://github.com/waseembaloch21" className="text-gray-400 hover:text-white">
               <FaGithub />
             </a>
-        
+
             <a
               href="https://www.linkedin.com/in/waseem-rauf-6076172b5/"
               target="_blank"

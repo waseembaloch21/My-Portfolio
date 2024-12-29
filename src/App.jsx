@@ -9,7 +9,7 @@ import Footer from './Components/Footer';
 
 const App = () => {
   return (
-    <div>
+    <div className='container mx-auto'>
       <HeaderSection/>
       <ProjectsSection/>
       <ServicesSection/>
@@ -17,7 +17,7 @@ const App = () => {
       <Contact/>
       <Footer/>
       
-      {/* WhatsApp Icon */}
+      
       <a 
         href="https://wa.me/923324572782" 
         target="_blank" 
