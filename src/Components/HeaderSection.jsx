@@ -9,17 +9,17 @@ const HeaderSection = () => {
       {/* Background Canvas */}
       {/* <BackgroundCanvas /> */}
       <div>
-        <BackgroundCanvas/>
-    
-    </div>
+        <BackgroundCanvas />
+
+      </div>
       {/* Navbar */}
       <div className='px-5 sm:px-20 md:px-32'>
-        <Navbar/>
+        <Navbar />
       </div>
 
       {/* Hero Section */}
       <div className='flex-grow flex items-center px-5 sm:px-20 md:px-32'>
-       <Hero/>
+        <Hero />
       </div>
     </header>
   );

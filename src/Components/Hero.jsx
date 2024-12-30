@@ -32,7 +32,7 @@ const Hero = () => {
 
     return (
         <div className='flex flex-col md:flex-row justify-between items-center font-poppins gap-5 md:gap-20 px-5'>
-            {/* Left - Content */}
+         
             <div className='text-center md:text-left'>
                 <h1 className='text-3xl md:text-5xl font-serif font-bold mb-2 md:mb-4'>Hy!I AM</h1>
                 <span className='sm:text-3xl text-cyan-300 font-bold font-serif md:text-5xl'>Waseem Baloch</span><br />
@@ -54,10 +54,10 @@ const Hero = () => {
                 </a>
             </div>
 
-            {/* Mid - Image */}
+          
             <img className="w-60 h-60 rounded-full border-4 border-gray-200 shadow-lg" src={MyLogo} alt="Developer" />
 
-            {/* Right - Social Icons */}
+           
             <div className="flex flex-row md:flex-col items-center gap-5 text-gray-400">
                 <a href="https://www.linkedin.com/in/waseem-rauf-6076172b5/">
                     <TiSocialLinkedin />

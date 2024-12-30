@@ -49,7 +49,7 @@ const ProjectsSection = () => {
             key={index}
             className="bg-gray-800 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
           >
-            <img 
+            <img
               src={project.image}
               alt={project.title}
               className="w-full h-52 object-cover rounded-xl p-2 "
