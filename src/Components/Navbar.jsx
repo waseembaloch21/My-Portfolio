@@ -14,28 +14,28 @@ const Navbar = () => {
             {/* Logo and Name */}
             <a href="#home" className='flex items-center gap-3'>
                 <img
-                    className='rounded-full w-14 md:w-16 border-2 border-blue-600'
+                    className='rounded-full w-14 md:w-16 border-2 border-cyan-300'
                     src={MyLogo}
                     alt="Waseem Baloch Logo"
                     aria-label="Waseem Baloch Logo"
                 />
-                <span className='font-poppins text-lg md:text-xl font-semibold '>Waseem Baloch</span>
+                <span className='font-serif text-lg md:text-xl font-semibold '>Waseem Baloch</span>
             </a>
 
             {/* Desktop Navigation Menu */}
             <nav>
-                <ul className='hidden md:flex gap-6 font-poppins text-base'>
+                <ul className='hidden md:flex gap-6 font-serif text-base'>
                     <li>
-                        <a href="#home" className='hover:text-blue-600 hover:underline cursor-pointer text-xl font-bold'>Home</a>
+                        <a href="#home" className='hover:text-blue-600 hover:underline cursor-pointer text-xl font-serif font-bold'>Home</a>
                     </li>
                     <li>
-                        <a href="#projects" className='hover:text-blue-600 hover:underline cursor-pointer text-xl font-bold'>Projects</a>
+                        <a href="#projects" className='hover:text-blue-600 hover:underline cursor-pointer text-xl font-serif font-bold'>Projects</a>
                     </li>
                     <li>
-                        <a href="#services" className='hover:text-blue-600 hover:underline cursor-pointer text-xl font-bold'>Services</a>
+                        <a href="#services" className='hover:text-blue-600 hover:underline cursor-pointer text-xl font-serif font-bold'>Services</a>
                     </li>
                     <li>
-                        <a href="#contact" className='hover:text-blue-600 hover:underline cursor-pointer text-xl font-bold'>Contact</a>
+                        <a href="#contact" className='hover:text-blue-600 hover:underline cursor-pointer text-xl font-serif font-bold'>Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -59,16 +59,16 @@ const Navbar = () => {
 
                     <ul className='flex flex-col gap-6 font-poppins text-xl  text-center'>
                         <li>
-                            <a href="#home" className='hover:text-gray-400 cursor-pointer' onClick={toggleMenu}>Home</a>
+                            <a href="#home" className='hover:text-gray-400 font-serif cursor-pointer' onClick={toggleMenu}>Home</a>
                         </li>
                         <li>
-                            <a href="#projects" className='hover:text-gray-400 cursor-pointer' onClick={toggleMenu}>Projects</a>
+                            <a href="#projects" className='hover:text-gray-400 font-serif cursor-pointer' onClick={toggleMenu}>Projects</a>
                         </li>
                         <li>
-                            <a href="#services" className='hover:text-gray-400 cursor-pointer' onClick={toggleMenu}>Services</a>
+                            <a href="#services" className='hover:text-gray-400 font-serif cursor-pointer' onClick={toggleMenu}>Services</a>
                         </li>
                         <li>
-                            <a href="#contact" className='hover:text-gray-400 cursor-pointer' onClick={toggleMenu}>Contact</a>
+                            <a href="#contact" className='hover:text-gray-400 font-serif cursor-pointer' onClick={toggleMenu}>Contact</a>
                         </li>
                     </ul>
                 </div>

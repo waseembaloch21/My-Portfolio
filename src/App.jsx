@@ -10,6 +10,7 @@ import Footer from './Components/Footer';
 const App = () => {
   return (
     <div className='container mx-auto'>
+
       <HeaderSection />
       <ProjectsSection />
       <ServicesSection />
@@ -25,6 +26,7 @@ const App = () => {
       >
         <FaWhatsapp size={40} />
       </a>
+      
     </div>
   );
 };

@@ -32,13 +32,13 @@ const Hero = () => {
 
     return (
         <div className='flex flex-col md:flex-row justify-between items-center font-poppins gap-5 md:gap-20 px-5'>
-         
+
             <div className='text-center md:text-left'>
                 <h1 className='text-3xl md:text-5xl font-serif font-bold mb-2 md:mb-4'>Hy!I AM</h1>
                 <span className='sm:text-3xl text-cyan-300 font-bold font-serif md:text-5xl'>Waseem Baloch</span><br />
-                
+
                 <h1 className='font-serif text-3xl'>Passionate</h1><span ref={typedElementRef} className='sm:text-4xl text-cyan-300 font-serif md:text-5xl font-semibold'></span>
-                <p className='text-gray-400 font-serif leading-7 mb-6'>I am design a beautiful, responsive, and user-friendly web interfaces with modern frontend technologies.</p>
+                <p className='text-gray-400 font-serif leading-7 mb-6'>I design a beautiful, responsive, and user-friendly web interfaces with modern frontend technologies.</p>
                 <button
                     onClick={() => setIsModalOpen(true)}
                     className="cv"
@@ -54,10 +54,9 @@ const Hero = () => {
                 </a>
             </div>
 
-          
-            <img className="w-60 h-60 rounded-full border-4 border-gray-200 shadow-lg" src={MyLogo} alt="Developer" />
 
-           
+            <img className="w-60 h-60 rounded-full border-4 border-cyan-300 shadow-lg" src={MyLogo} alt="Developer" />
+
             <div className="flex flex-row md:flex-col items-center gap-5 text-gray-400">
                 <a href="https://www.linkedin.com/in/waseem-rauf-6076172b5/">
                     <TiSocialLinkedin />
@@ -84,43 +83,40 @@ const Hero = () => {
                             >
                                 &times;
                             </button>
-                            <h2 className="text-2xl font-bold mb-4">About Me</h2>
-                            <p className="text-gray-300 mb-6">
+                            <h2 className="text-2xl font-serif font-bold mb-4">About Me</h2>
+                            <p className="text-gray-300 font-serif mb-6">
                                 I am a passionate Front-End Developer specialized in creating responsive and user-friendly web interfaces. My core skills include:
                             </p>
                             <div className='flex justify-center items-center'>
                                 <ul className="list-disc list-inside text-gray-400 mb-4">
-                                    <li className="flex items-center gap-2 text-blue-600 text-2xl"><FaReact /> React.js</li>
-                                    <li className="flex items-center gap-2 text-blue-400 text-2xl"><SiTailwindcss /> Tailwind CSS</li>
-                                    <li className="flex items-center gap-2 text-yellow-400 text-2xl"><SiJavascript /> JavaScript</li>
-                                    <li className="flex items-center gap-2 text-orange-500 text-2xl"><SiHtml5 /> HTML5</li>
-                                    <li className="flex items-center gap-2 text-blue-500 text-2xl"><SiCss3 /> CSS3</li>
-                                    <li className="flex items-center gap-2 text-purple-600 text-2xl"><FaFigma /> Figma</li>
-                                    <li className="flex items-center gap-2 text-indigo-600 text-2xl"><SiBootstrap /> Bootstrap</li>
-                                    <li className="flex items-center gap-2 text-gray-600 text-2xl"><FaGit /> Git & GitHub</li>
+                                    <li className="flex font-serif items-center gap-2 text-blue-600 text-2xl"><FaReact /> React.js</li>
+                                    <li className="flex font-serif items-center gap-2 text-blue-400 text-2xl"><SiTailwindcss /> Tailwind CSS</li>
+                                    <li className="flex font-serif items-center gap-2 text-yellow-400 text-2xl"><SiJavascript /> JavaScript</li>
+                                    <li className="flex font-serif items-center gap-2 text-orange-500 text-2xl"><SiHtml5 /> HTML5</li>
+                                    <li className="flex font-serif items-center gap-2 text-blue-500 text-2xl"><SiCss3 /> CSS3</li>
+                                    <li className="flex font-serif items-center gap-2 text-purple-600 text-2xl"><FaFigma /> Figma</li>
+                                    <li className="flex font-serif items-center gap-2 text-indigo-600 text-2xl"><SiBootstrap /> Bootstrap</li>
+                                    <li className="flex font-serif items-center gap-2 text-gray-600 text-2xl"><FaGit /> Git & GitHub</li>
                                 </ul>
 
                                 {/* Right - Image */}
                                 <div className="flex-1 flex justify-center items-center">
                                     <img
-                                        className=" hidden sm:block w-60 h-60 rounded-full border-4 border-gray-200 shadow-lg"
+                                        className=" hidden sm:block w-60 h-60 rounded-full border-4 border-cyan-300 shadow-lg"
                                         src={MyLogo}
                                         alt="Waseem Baloch"
                                     />
                                 </div>
                             </div>
 
-                            <p className="text-gray-300">
-                                <strong>Education:</strong> Self-learning.
+                            <p className="text-gray-300 font-serif">
+                                <strong>Education:</strong> BS-Information Technology , Self-Learning.
                             </p>
                         </div>
-
-
                     </div>
                 </div>
             )}
         </div>
     );
 }
-
 export default Hero;

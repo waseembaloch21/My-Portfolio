@@ -53,7 +53,7 @@ const Contact = () => {
 
     return (
         <div id='contact' className="bg-black text-white py-10 w-full px-5 sm:px-20 md:px-32">
-            <h2 className="text-3xl font-bold mb-8 text-center">Let's Connect</h2>
+            <h2 className="text-3xl font-bold font-serif mb-8 text-center">Let's Connect</h2>
             <div className="flex items-center justify-between">
                 <div className="hidden md:block w-1/2 pl-8">
                     <img
@@ -65,7 +65,7 @@ const Contact = () => {
                 <div className="w-full md:w-1/2">
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4">
-                            <label htmlFor="name" className="block text-lg mb-2">Name</label>
+                            <label htmlFor="name" className="block font-serif text-lg mb-2">Name</label>
                             <div className="flex items-center border border-gray-500 p-2 rounded-lg">
                                 <FaUserAlt className="text-blue-500 mr-2" />
                                 <input
@@ -75,13 +75,13 @@ const Contact = () => {
                                     placeholder="Enter your name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="bg-transparent text-white w-full outline-none"
+                                    className="bg-transparent font-serif text-white w-full outline-none"
                                 />
                             </div>
                             {formErrors.name && <p className="text-red-500 text-sm">{formErrors.name}</p>}
                         </div>
                         <div className="mb-4">
-                            <label htmlFor="email" className="block text-lg mb-2">Email</label>
+                            <label htmlFor="email" className="block font-serif text-lg mb-2">Email</label>
                             <div className="flex items-center border border-gray-500 p-2 rounded-lg">
                                 <FaEnvelope className="text-blue-500 mr-2" />
                                 <input
@@ -91,13 +91,13 @@ const Contact = () => {
                                     placeholder="Enter your email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="bg-transparent text-white w-full outline-none"
+                                    className="bg-transparent font-serif text-white w-full outline-none"
                                 />
                             </div>
                             {formErrors.email && <p className="text-red-500 text-sm">{formErrors.email}</p>}
                         </div>
                         <div className="mb-4">
-                            <label htmlFor="message" className="block text-lg mb-2">Message</label>
+                            <label htmlFor="message" className="block font-serif text-lg mb-2">Message</label>
                             <div className="flex items-start border border-gray-500 p-2 rounded-lg">
                                 <FaPaperPlane className="text-blue-500 mr-2" />
                                 <textarea
@@ -107,14 +107,14 @@ const Contact = () => {
                                     rows="4"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="bg-transparent text-white w-full outline-none resize-none"
+                                    className="bg-transparent  font-serif text-white w-full outline-none resize-none"
                                 />
                             </div>
                             {formErrors.message && <p className="text-red-500 text-sm">{formErrors.message}</p>}
                         </div>
                         <button
                             type="submit"
-                            className="bg-cyan-300 hover:bg-cyan-600 text-black py-2 px-6 rounded-lg flex items-center w-full justify-center text-center"
+                            className="bg-cyan-300 hover:bg-cyan-600 text-black py-2 px-6 font-serif rounded-lg flex items-center w-full justify-center text-center"
                         >
                             <FaPaperPlane className="mr-2" />
                             Send Message

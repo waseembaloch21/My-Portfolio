@@ -11,7 +11,7 @@ const projects = [
       "The Event App is a modern, responsive web application designed to help users discover, create, and manage events effortlessly.",
     image: EventsApp,
     link: "https://findfriend.vercel.app/",
-    technologies: ["Next.Js", "Tailwind.CSS"],
+    technologies: ["Next Js", "Tailwind.CSS"],
   },
   {
     title: "Furniture Web",
@@ -19,7 +19,7 @@ const projects = [
       "Furniture Web is a modern and responsive e-commerce website designed for browsing and purchasing furniture online. ",
     image: Furniture,
     link: "https://furniture-web-beta.vercel.app/",
-    technologies: ["React.js", "Tailwind.CSS"],
+    technologies: ["React JS", "Tailwind.CSS"],
   },
   {
     title: "Todo App",
@@ -27,7 +27,7 @@ const projects = [
       "The Todo App is a user-friendly and interactive web application designed to help users manage their daily tasks effectively. ",
     image: TodoApp,
     link: "https://todo-app-seven-silk-87.vercel.app/",
-    technologies: ["React.js", "Tailwind.CSS"],
+    technologies: ["React JS", "Tailwind.CSS"],
   },
   {
     title: "Weather-App",
@@ -35,14 +35,23 @@ const projects = [
       "The Weather App is a responsive web application that provides real-time weather updates for any location worldwide. ",
     image: WeatherApp,
     link: "https://weather-app-two-phi-91.vercel.app/",
-    technologies: ["React.js", "Tailwind.CSS"],
+    technologies: ["React JS", "Tailwind.CSS"],
+  },
+  {
+    title: "Image Uploader",
+    description:
+      "The Image Upload App is a mernstack app, responsive web application designed to upload a image on Cloudinary.",
+    image: EventsApp,
+    link: "https://findfriend.vercel.app/",
+    technologies: ["React JS", "Express JS"],
   },
 ];
 
 const ProjectsSection = () => {
   return (
-    <div id="projects" className="bg-[#121212] text-white py-10 px-5 sm:px-20 md:px-32">
-      <h2 className="text-3xl font-bold mb-8 text-center">My Projects</h2>
+
+    <div id="projects" className="bg-[#121212] text-white py-10 px-5 mt-7 sm:px-20 md:px-32">
+      <h2 className="text-3xl font-bold font-serif  mb-8 text-center">My Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <div
@@ -55,13 +64,13 @@ const ProjectsSection = () => {
               className="w-full h-52 object-cover rounded-xl p-2 "
             />
             <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-300 mb-3">{project.description}</p>
+              <h3 className="text-xl font-serif font-semibold mb-2">{project.title}</h3>
+              <p className="text-gray-300 font-serif mb-3">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-3">
                 {project.technologies.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="bg-cyan-300 text-black text-xs font-medium py-1 px-3 rounded-full"
+                    className="bg-cyan-300 text-black text-xs font-serif font-medium py-1 px-3 rounded-full"
                   >
                     #{tech}
                   </span>
@@ -71,7 +80,7 @@ const ProjectsSection = () => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-center bg-cyan-300 text-black py-3 px-6 rounded-lg hover:bg-cyan-600 transition"
+                className="block text-center font-serif bg-cyan-300 text-black py-3 px-6 rounded-lg hover:bg-cyan-600 transition"
               >
                 View Project
               </a>

@@ -28,7 +28,7 @@ const Testimonials = () => {
   return (
     <section className="bg-[#121212] py-16">
       <div className="container mx-auto px-4 text-center text-white">
-        <h2 className="text-3xl font-bold mb-8">What My Friends Say </h2>
+        <h2 className="text-3xl font-serif font-bold mb-8">What My Friends Say </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-lg">
@@ -37,10 +37,10 @@ const Testimonials = () => {
                 alt={testimonial.name}
                 className="w-24 h-24 rounded-full mx-auto mb-4"
               />
-              <p className="text-gray-400 mb-4">"{testimonial.message}"</p>
+              <p className="text-gray-400 font-serif mb-4">"{testimonial.message}"</p>
               <div className="text-center">
-                <h3 className="text-xl font-semibold">{testimonial.name}</h3>
-                <p className="text-gray-500">{testimonial.role}</p>
+                <h3 className="text-xl font-serif font-semibold">{testimonial.name}</h3>
+                <p className="text-gray-500 font-serif">{testimonial.role}</p>
               </div>
             </div>
           ))}
