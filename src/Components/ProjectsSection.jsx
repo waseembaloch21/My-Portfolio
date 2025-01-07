@@ -3,6 +3,7 @@ import EventsApp from "../assets/images/Events-app.jpg";
 import Furniture from "../assets/images/Furniture.avif";
 import TodoApp from "../assets/images/Todo-app.jpeg";
 import WeatherApp from "../assets/images/Weather-App.avif";
+import ImageUpload from "../assets/images/ImageUpload.png"
 
 const projects = [
   {
@@ -41,8 +42,8 @@ const projects = [
     title: "Image Uploader",
     description:
       "The Image Upload App is a mernstack app, responsive web application designed to upload a image on Cloudinary.",
-    image: EventsApp,
-    link: "https://findfriend.vercel.app/",
+    image: ImageUpload,
+    link: "",
     technologies: ["React JS", "Express JS"],
   },
 ];

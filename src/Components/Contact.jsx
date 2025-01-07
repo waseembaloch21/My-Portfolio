@@ -39,7 +39,7 @@ const Contact = () => {
 
         if (!validateForm()) return;
 
-        // Use EmailJS to send the form data as an email
+        
         emailjs.sendForm('service_ijsugv2', 'template_jcw3dxg', e.target, 'dxlIerXfEdTyPTsYl')
             .then((result) => {
                 console.log('Message sent:', result.text);
