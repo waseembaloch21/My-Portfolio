@@ -3,13 +3,13 @@ import EventsApp from "../assets/images/Events-app.jpg";
 import Furniture from "../assets/images/Furniture.avif";
 import TodoApp from "../assets/images/Todo-app.jpeg";
 import WeatherApp from "../assets/images/Weather-App.avif";
-import ImageUpload from "../assets/images/ImageUpload.png"
+import ImageUpload from "../assets/images/ImageUpload.png";
 
 const projects = [
   {
     title: "Events App",
     description:
-      "The Event App is a modern, responsive web application designed to help users discover, create, and manage events effortlessly.",
+      "The Event App is a modern FullStack app, responsive web application designed to help users discover, create, and manage events effortlessly.",
     image: EventsApp,
     link: "https://findfriend.vercel.app/",
     technologies: ["Next Js", "Tailwind.CSS"],

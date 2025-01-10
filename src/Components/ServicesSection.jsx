@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLaptopCode, FaMobileAlt, FaPalette, FaChartBar } from "react-icons/fa";
+import { FaLaptopCode, FaMobileAlt,  FaChartBar } from "react-icons/fa";
 
 const services = [
   {
@@ -15,12 +15,6 @@ const services = [
     icon: <FaMobileAlt className="text-green-400 text-4xl mx-auto" />,
   },
   {
-    title: "UI/UX Design",
-    description:
-      "Creating visually appealing and user-centered designs to enhance the user experience and interface.",
-    icon: <FaPalette className="text-pink-400 text-4xl mx-auto" />,
-  },
-  {
     title: "Performance Optimization",
     description:
       "Optimizing web applications for speed and performance to provide a seamless user experience.",
@@ -32,7 +26,7 @@ const ServicesSection = () => {
   return (
     <div id="services" className="bg-black text-gray-100 py-10 px-5 sm:px-20 md:px-32">
       <h2 className="text-3xl font-bold font-serif mb-8 text-center">My Services</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <div
             key={index}

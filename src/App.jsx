@@ -6,16 +6,16 @@ import ServicesSection from './Components/ServicesSection';
 import Testimonials from './Components/Testimonials';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
-import Expertise from './Components/Expertise';
+import Skills from './Components/Skills';
 
 const App = () => {
   return (
+    
     <div className='container mx-auto'>
-
       <HeaderSection />
       <ProjectsSection />
       <ServicesSection />
-      <Expertise/>
+      <Skills/>
       <Testimonials />
       <Contact />
       <Footer />

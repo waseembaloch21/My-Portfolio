@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 
 const Footer = () => {
