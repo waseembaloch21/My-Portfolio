@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import MyLogo from '../assets/images/Logo.jpeg';
+import MyLogo from '../assets/images/Logo2.jpg';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
     return (
         <div className='flex justify-between items-center px-5 py-3 shadow-md'>
             <a href="#home" className='flex items-center gap-3'>
@@ -33,7 +31,7 @@ const Navbar = () => {
                         <a href="#services" className='hover:text-blue-600 hover:underline cursor-pointer text-xl font-serif font-bold'>Services</a>
                     </li>
                     <li>
-                        <a href="#Skills" className='hover:text-blue-600 hover:underline cursor-pointer text-xl font-serif font-bold'>Skills</a>
+                        <a href="#skills" className='hover:text-blue-600 hover:underline cursor-pointer text-xl font-serif font-bold'>Skills</a>
                     </li>
                     <li>
                         <a href="#contact" className='hover:text-blue-600 hover:underline cursor-pointer text-xl font-serif font-bold'>Contact</a>
@@ -67,7 +65,7 @@ const Navbar = () => {
                             <a href="#services" className='hover:text-gray-400 font-serif cursor-pointer' onClick={toggleMenu}>Services</a>
                         </li>
                         <li>
-                            <a href="#Skills" className='hover:text-gray-400 font-serif cursor-pointer' onClick={toggleMenu}>Skills</a>
+                            <a href="#skills" className='hover:text-gray-400 font-serif cursor-pointer' onClick={toggleMenu}>Skills</a>
                         </li>
                         <li>
                             <a href="#contact" className='hover:text-gray-400 font-serif cursor-pointer' onClick={toggleMenu}>Contact</a>

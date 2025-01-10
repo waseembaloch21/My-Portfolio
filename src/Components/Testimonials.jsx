@@ -31,7 +31,7 @@ const Testimonials = () => {
         <h2 className="text-3xl font-serif font-bold mb-8">What My Friends Say </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-lg text-center hover:shadow-2xl transition-transform transform hover:scale-105">
               <img
                 src={testimonial.img}
                 alt={testimonial.name}

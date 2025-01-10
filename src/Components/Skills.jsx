@@ -23,7 +23,7 @@ const Skills = () => {
   ];    
 
   return (     
-    <div id="services" className="bg-black text-gray-100 py-10 px-5 sm:px-20 md:px-32">       
+    <div id="skills" className="bg-black text-gray-100 py-10 px-5 sm:px-20 md:px-32">       
       <h2 className="text-3xl font-bold font-serif mb-8 text-center">My Skills</h2>       
       <div className="card-box flex flex-wrap items-center justify-evenly gap-8">       
         {skillsObj.map((data, ind) => {           

@@ -12,6 +12,7 @@ const App = () => {
   return (
     
     <div className='container mx-auto'>
+      
       <HeaderSection />
       <ProjectsSection />
       <ServicesSection />
