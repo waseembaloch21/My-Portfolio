@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import ContactImage from "../assets/images/contact.svg";
-import { FaUserAlt, FaEnvelope, FaPaperPlane } from 'react-icons/fa';
+import { FaUserAlt, FaEnvelope,FaSpinner, FaPaperPlane } from 'react-icons/fa';
 
 
 const Contact = () => {
@@ -11,9 +11,12 @@ const Contact = () => {
     const [message, setMessage] = useState("");
     const [status, setStatus] = useState("");
     const [date, setDate] = useState("");
+    const [loading, setLoading] = useState(false);
+
 
     const sendEmail = async (e) => {
         e.preventDefault();
+        setLoading(true);
         setStatus("Sending...");
 
         const currentDate = new Date().toLocaleString("en-US", {
@@ -36,13 +39,19 @@ const Contact = () => {
             });
 
             if (response.ok) {
-                setStatus("Email sent successfully!");
+                setStatus("Email Sent Successfully!");
+                setEmail("");
+                setName("");
+                setSubject("");
+                setMessage("");
             } else {
                 const errorData = await response.json();
                 setStatus(`Failed to send email: ${errorData.error}`);
             }
         } catch (error) {
             setStatus(`An error occurred: ${error.message}`);
+        }finally {
+            setLoading(false);
         }
     };
 
@@ -108,11 +117,19 @@ const Contact = () => {
                            
                         </div>
                         <button
+                         disabled={loading}
                             type="submit"
                             className="bg-cyan-300 hover:bg-cyan-600 text-black py-2 px-6 font-serif rounded-lg flex items-center w-full justify-center text-center"
                         >
-                            <FaPaperPlane className="mr-2" />
-                            Send Message
+                            {loading ? (
+                                <>
+                                    <FaSpinner className="animate-spin mr-2" /> Sending...
+                                </>
+                            ) : (
+                                <>
+                                    <FaPaperPlane className="mr-2" /> Send Message
+                                </>
+                            )}
                         </button>
                     </form>
                 </div>
