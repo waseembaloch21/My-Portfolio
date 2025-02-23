@@ -1,9 +1,9 @@
 import React from "react";
 import EventsApp from "../assets/images/Events-app.jpg";
 import Furniture from "../assets/images/Furniture.avif";
-import TodoApp from "../assets/images/Todo-app.jpeg";
+// import TodoApp from "../assets/images/Todo-app.jpeg";
 import WeatherApp from "../assets/images/Weather-App.avif";
-import ImageUpload from "../assets/images/ImageUpload.png";
+// import ImageUpload from "../assets/images/ImageUpload.png";
 
 const projects = [
   {
@@ -22,14 +22,14 @@ const projects = [
     link: "https://furniture-web-beta.vercel.app/",
     technologies: ["React JS", "Tailwind.CSS"],
   },
-  {
-    title: "Todo App",
-    description:
-      "The Todo App is a user-friendly and interactive web application designed to help users manage their daily tasks effectively. ",
-    image: TodoApp,
-    link: "https://todo-app-seven-silk-87.vercel.app/",
-    technologies: ["React JS", "Tailwind.CSS"],
-  },
+  // {
+  //   title: "Todo App",
+  //   description:
+  //     "The Todo App is a user-friendly and interactive web application designed to help users manage their daily tasks effectively. ",
+  //   image: TodoApp,
+  //   link: "https://todo-app-seven-silk-87.vercel.app/",
+  //   technologies: ["React JS", "Tailwind.CSS"],
+  // },
   {
     title: "Weather-App",
     description:
@@ -38,14 +38,14 @@ const projects = [
     link: "https://weather-app-two-phi-91.vercel.app/",
     technologies: ["React JS", "Tailwind.CSS"],
   },
-  {
-    title: "Image Uploader",
-    description:
-      "The Image Upload App is a mernstack app, responsive web application designed to upload a image on Cloudinary.",
-    image: ImageUpload,
-    link: "",
-    technologies: ["React JS", "Express JS"],
-  },
+  // {
+  //   title: "Image Uploader",
+  //   description:
+  //     "The Image Upload App is a mernstack app, responsive web application designed to upload a image on Cloudinary.",
+  //   image: ImageUpload,
+  //   link: "",
+  //   technologies: ["React JS", "Express JS"],
+  // },
 ];
 
 const ProjectsSection = () => {

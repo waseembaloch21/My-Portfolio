@@ -1,54 +1,49 @@
-import React, { useState } from 'react';
-import { FaUserAlt, FaEnvelope, FaPaperPlane } from 'react-icons/fa';
-import emailjs from 'emailjs-com';  // Import EmailJS
+"use client";
+import { useState } from "react";
 import ContactImage from "../assets/images/contact.svg";
+import { FaUserAlt, FaEnvelope, FaPaperPlane } from 'react-icons/fa';
+
 
 const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: '',
-    });
+    const [email, setEmail] = useState("");
+    const [name, setName] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+    const [status, setStatus] = useState("");
+    const [date, setDate] = useState("");
 
-    const [formErrors, setFormErrors] = useState({
-        name: '',
-        email: '',
-        message: '',
-    });
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
-    };
-
-    const validateForm = () => {
-        const errors = {};
-        if (!formData.name) errors.name = 'Name is required';
-        if (!formData.email) errors.email = 'Email is required';
-        else if (!/\S+@\S+\.\S+/.test(formData.email)) errors.email = 'Email is invalid';
-        if (!formData.message) errors.message = 'Message is required';
-        setFormErrors(errors);
-        return Object.keys(errors).length === 0;
-    };
-
-    const handleSubmit = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
+        setStatus("Sending...");
 
-        if (!validateForm()) return;
+        const currentDate = new Date().toLocaleString("en-US", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+        });
+        setDate(currentDate);
 
-        
-        emailjs.sendForm('service_ijsugv2', 'template_jcw3dxg', e.target, 'dxlIerXfEdTyPTsYl')
-            .then((result) => {
-                console.log('Message sent:', result.text);
-                alert('Message sent successfully!');
-                setFormData({ name: '', email: '', message: '' });
-            }, (error) => {
-                console.log('Error:', error.text);
-                alert('Failed to send message. Please try again.');
+        try {                                    
+            const response = await fetch("/src/api/send-email/route.js", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ to: email, name, subject, message }),
             });
+
+            if (response.ok) {
+                setStatus("Email sent successfully!");
+            } else {
+                const errorData = await response.json();
+                setStatus(`Failed to send email: ${errorData.error}`);
+            }
+        } catch (error) {
+            setStatus(`An error occurred: ${error.message}`);
+        }
     };
 
     return (
@@ -63,7 +58,7 @@ const Contact = () => {
                     />
                 </div>
                 <div className="w-full md:w-1/2">
-                    <form onSubmit={handleSubmit}>
+                    <form method="POST" onSubmit={sendEmail}>
                         <div className="mb-4">
                             <label htmlFor="name" className="block font-serif text-lg mb-2">Name</label>
                             <div className="flex items-center border border-gray-500 p-2 rounded-lg">
@@ -73,12 +68,12 @@ const Contact = () => {
                                     id="name"
                                     name="name"
                                     placeholder="Enter your name"
-                                    value={formData.name}
-                                    onChange={handleChange}
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
                                     className="bg-transparent font-serif text-white w-full outline-none"
                                 />
                             </div>
-                            {formErrors.name && <p className="text-red-500 text-sm">{formErrors.name}</p>}
+                           
                         </div>
                         <div className="mb-4">
                             <label htmlFor="email" className="block font-serif text-lg mb-2">Email</label>
@@ -89,12 +84,12 @@ const Contact = () => {
                                     id="email"
                                     name="email"
                                     placeholder="Enter your email"
-                                    value={formData.email}
-                                    onChange={handleChange}
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     className="bg-transparent font-serif text-white w-full outline-none"
                                 />
                             </div>
-                            {formErrors.email && <p className="text-red-500 text-sm">{formErrors.email}</p>}
+                           
                         </div>
                         <div className="mb-4">
                             <label htmlFor="message" className="block font-serif text-lg mb-2">Message</label>
@@ -105,12 +100,12 @@ const Contact = () => {
                                     name="message"
                                     placeholder="Enter your message"
                                     rows="4"
-                                    value={formData.message}
-                                    onChange={handleChange}
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
                                     className="bg-transparent  font-serif text-white w-full outline-none resize-none"
                                 />
                             </div>
-                            {formErrors.message && <p className="text-red-500 text-sm">{formErrors.message}</p>}
+                           
                         </div>
                         <button
                             type="submit"
