@@ -4,6 +4,7 @@ import ContactImage from "../assets/images/contact.svg";
 import { FaUserAlt, FaEnvelope,FaSpinner, FaPaperPlane } from 'react-icons/fa';
 
 
+
 const Contact = () => {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");

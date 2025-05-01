@@ -27,8 +27,8 @@ export const sendEmail = async ({ to, name = "there", subject = "No Subject", me
     `;
 
     const response = await resend.emails.send({
-      from: "Onboarding@resend.dev", // Replace with your verified sender email
-      to: "waseemrauf672@gmail.com", // FIXED: Now using the correct recipient email
+      from: "Onboarding@resend.dev",
+      to: "waseemrauf672@gmail.com",
       subject,
       html,
     });
