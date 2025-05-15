@@ -9,11 +9,11 @@ function Root() {
   const [showWelcome, setShowWelcome] = useState(true);
 
   useEffect(() => {
-    setShowWelcome(true); // Always show welcome on load
+    setShowWelcome(true);
 
     const timeout = setTimeout(() => {
       setShowWelcome(false);
-    }, 3000); // Show welcome screen for 3 seconds
+    }, 3000);
 
     return () => clearTimeout(timeout);
   }, []);

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import ContactImage from "../assets/images/contact.svg";
-import { FaUserAlt, FaEnvelope,FaSpinner, FaPaperPlane } from 'react-icons/fa';
+import { FaUserAlt, FaEnvelope, FaSpinner, FaPaperPlane } from 'react-icons/fa';
 
 
 
@@ -30,7 +30,7 @@ const Contact = () => {
         });
         setDate(currentDate);
 
-        try {                                    
+        try {
             const response = await fetch("/src/api/send-email/route.js", {
                 method: "POST",
                 headers: {
@@ -51,14 +51,14 @@ const Contact = () => {
             }
         } catch (error) {
             setStatus(`An error occurred: ${error.message}`);
-        }finally {
+        } finally {
             setLoading(false);
         }
     };
 
     return (
         <div id='contact' className="bg-black text-white py-10 w-full px-5 sm:px-20 md:px-32">
-            <h2 className="text-3xl font-bold font-serif mb-8 text-center">Let's Connect</h2>
+            <h2 className="text-3xl font-bold font-serif mb-8 text-center">Contact Me</h2>
             <div className="flex items-center justify-between">
                 <div className="hidden md:block w-1/2 pl-8">
                     <img
@@ -77,13 +77,13 @@ const Contact = () => {
                                     type="text"
                                     id="name"
                                     name="name"
-                                    placeholder="Enter your name"
+                                    placeholder="Your Name"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     className="bg-transparent font-serif text-white w-full outline-none"
                                 />
                             </div>
-                           
+
                         </div>
                         <div className="mb-4">
                             <label htmlFor="email" className="block font-serif text-lg mb-2">Email</label>
@@ -93,13 +93,13 @@ const Contact = () => {
                                     type="email"
                                     id="email"
                                     name="email"
-                                    placeholder="Enter your email"
+                                    placeholder=" Your Email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     className="bg-transparent font-serif text-white w-full outline-none"
                                 />
                             </div>
-                           
+
                         </div>
                         <div className="mb-4">
                             <label htmlFor="message" className="block font-serif text-lg mb-2">Message</label>
@@ -108,17 +108,17 @@ const Contact = () => {
                                 <textarea
                                     id="message"
                                     name="message"
-                                    placeholder="Enter your message"
+                                    placeholder=" Your Message"
                                     rows="4"
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
                                     className="bg-transparent  font-serif text-white w-full outline-none resize-none"
                                 />
                             </div>
-                           
+
                         </div>
                         <button
-                         disabled={loading}
+                            disabled={loading}
                             type="submit"
                             className="bg-cyan-300 hover:bg-cyan-600 text-black py-2 px-6 font-serif rounded-lg flex items-center w-full justify-center text-center"
                         >
@@ -132,6 +132,7 @@ const Contact = () => {
                                 </>
                             )}
                         </button>
+                        {status && <p className="mt-3 sm:mt-4 text-sm text-green-400">{status}</p>}
                     </form>
                 </div>
 

@@ -35,7 +35,7 @@ const Hero = () => {
 
             <div className='text-center md:text-left'>
                 <h1 className='text-3xl md:text-5xl font-serif font-bold mb-2 md:mb-4'>Hy!I AM</h1>
-                <span className='sm:text-3xl text-cyan-300 font-bold font-serif md:text-5xl'>Waseem Baloch</span><br />
+                <span className='sm:text-5xl text-cyan-300 font-bold font-serif md:text-5xl'>Waseem Baloch</span><br />
 
                 <h1 className='font-serif text-3xl'>Passionate</h1><span ref={typedElementRef} className='sm:text-4xl text-cyan-300 font-serif md:text-5xl font-semibold'></span>
                 <p className='text-gray-400 font-serif leading-7 mb-6'>I design a beautiful, responsive, and user-friendly web interfaces with modern frontend technologies.</p>
