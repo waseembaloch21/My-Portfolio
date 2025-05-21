@@ -8,8 +8,8 @@ import Noman from '../assets/images/NomanV2.png';
 const testimonials = [
   {
     name: "Saif",
-    role: "Full Stack Developer",
-    message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iure minus veritatis voluptas tempora architecto nobis voluptates totam illum sunt? Minus asperiores fuga quae sequi placeat pariatur modi explicabo consectetur",
+    role: "   Web And App Devloper ",
+    message: " I specialize in building interactive and user-friendly websites. My goal is to help businesses establish a strong online presence through modern and scalable web solutions.",
     img: Saif
   },
   {
