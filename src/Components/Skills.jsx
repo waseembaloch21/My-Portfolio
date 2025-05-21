@@ -58,7 +58,7 @@ const skills = [
           <div className="mt-8 text-center">
             <button
               onClick={() => setShowAll(true)}
-              className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300"
+              className="cv text-black font-semibold py-2 px-6 rounded-full transition-all duration-300"
             >
               See More
             </button>
