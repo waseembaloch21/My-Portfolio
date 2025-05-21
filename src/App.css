@@ -4,6 +4,10 @@
     padding: 2rem;
     text-align: center;
   }
+
+   .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
   
   .logo {
     height: 6em;

@@ -1,4 +1,6 @@
-import React from "react";
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { FaLaptopCode, FaMobileAlt,  FaChartBar } from "react-icons/fa";
 
 const services = [
@@ -23,8 +25,16 @@ const services = [
 ];
 
 const ServicesSection = () => {
+
+   useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <div id="services" className="bg-black text-gray-100 py-10 px-5 sm:px-20 md:px-32">
+    <div id="services" className="bg-black text-gray-100 py-10 px-5 sm:px-20 md:px-32" data-aos="zoom-in" data-aos-delay="200">
       <h2 className="text-3xl font-bold font-serif mb-8 text-center">My Services</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (

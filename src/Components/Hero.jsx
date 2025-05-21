@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import AOS from 'aos';
 import MyLogo from '../assets/images/Logo.jpeg';
 import { TiSocialLinkedin } from "react-icons/ti";
 import { FaTwitter } from "react-icons/fa";
@@ -19,6 +20,7 @@ const Hero = () => {
     const typedElementRef = useRef(null);
 
     useEffect(() => {
+         AOS.init({ duration: 1000, once: true });
         const typed = new Typed(typedElementRef.current, {
             strings: ["FrontEnd Developer", "Web Developer", "Responsive Designer",],
             typeSpeed: 50,
@@ -33,7 +35,7 @@ const Hero = () => {
     return (
         <div className='flex flex-col md:flex-row justify-between items-center font-poppins gap-5 md:gap-20 px-5'>
 
-            <div className='text-center md:text-left'>
+            <div className='text-center md:text-left' data-aos="zoom-out">
                 <h1 className='text-3xl md:text-5xl font-serif font-bold mb-2 md:mb-4'>Hy!I AM</h1>
                 <span className='sm:text-5xl text-cyan-300 font-bold font-serif md:text-5xl'>Waseem Baloch</span><br />
 
@@ -55,7 +57,7 @@ const Hero = () => {
             </div>
 
 
-            <img className="w-60 h-60 rounded-full border-4 border-cyan-300 shadow-lg" src={MyLogo} alt="Developer" />
+            <img className="w-60 h-60 rounded-full border-4 border-cyan-300 shadow-lg"  data-aos="fade-up" src={MyLogo} alt="Developer" />
 
             <div className="flex flex-row md:flex-col items-center gap-5 text-gray-400">
                 <a href="https://www.linkedin.com/in/waseem-rauf-6076172b5/">

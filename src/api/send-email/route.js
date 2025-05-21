@@ -1,31 +1,26 @@
-import { sendEmail } from "../../lib/resend";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req) {
+  const { name, email, message } = await req.json();
+
   try {
-    const { to, name, subject, message } = await req.json();
-
-    
-    if (!to || !subject || !message) {
-      return new Response(
-        JSON.stringify({ error: "Missing parameters: 'to', 'subject', and 'message' are required." }),
-        { status: 400, headers: { "Content-Type": "application/json" } }
-      );
-    }
-
-    console.log("Sending email to:", to);
-
-    
-    const emailResponse = await sendEmail({ to, name: name || "there", subject, message });
-
-    return new Response(JSON.stringify(emailResponse), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
+    const data = await resend.emails.send({
+      from: 'onboarding@resend.dev',
+      to: ['waseemrauf672@email.com'], // Change to your recipient email
+      subject: `New contact message from ${name}`,
+      reply_to: "waseemrauf672@gmail.com",
+      html: `<p><strong>Name:</strong> ${name}</p>
+             <p><strong>Email:</strong> ${email}</p>
+             <p><strong>Message:</strong></p>
+             <p>${message}</p>`,
     });
+
+      return new Response(
+      JSON.stringify({ success: true, data }),
+      { status: 200, headers: { 'Content-Type': 'application/json' } });
   } catch (error) {
-    console.error("Error in POST /api/send-email:", error);
-    return new Response(
-      JSON.stringify({ error: "Failed to send email. Please try again later." }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
-    );
+    return Response.json({ success: false, error: error.message }, { status: 500 });
   }
 }

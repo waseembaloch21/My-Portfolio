@@ -1,33 +1,41 @@
-import React from 'react';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Saif from '../assets/images/Saif.jpeg';
 import Adnan from '../assets/images/Adnan.jpeg';
-import Taif from '../assets/images/Taif.jpeg';
+import Noman from '../assets/images/NomanV2.png';
 
+const testimonials = [
+  {
+    name: "Saif",
+    role: "Full Stack Developer",
+    message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iure minus veritatis voluptas tempora architecto nobis voluptates totam illum sunt? Minus asperiores fuga quae sequi placeat pariatur modi explicabo consectetur",
+    img: Saif
+  },
+  {
+    name: "Adnan",
+    role: "Full Stack Developer",
+    message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iure minus veritatis voluptas tempora architecto nobis voluptates totam illum sunt? Minus asperiores fuga quae sequi placeat pariatur modi explicabo consectetur",
+    img: Adnan,
+  },
+  {
+    name: "Noman Amman ",
+    role: " IT Service Analyst | Innovator | Problem Solver",
+    message: " Bridging technology and strategy to create efficient, secure, and scalable IT solutions. I specialize in elevating digital infrastructures and service management.",
+    img: Noman,
+  },
+];
 const Testimonials = () => {
-  const testimonials = [
-    {
-      name: "Saif",
-      role: "Full Stack Developer",
-      message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iure minus veritatis voluptas tempora architecto nobis voluptates totam illum sunt? Minus asperiores fuga quae sequi placeat pariatur modi explicabo consectetur",
-      img: Saif
-    },
-    {
-      name: "Adnan",
-      role: "Full Stack Developer",
-      message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iure minus veritatis voluptas tempora architecto nobis voluptates totam illum sunt? Minus asperiores fuga quae sequi placeat pariatur modi explicabo consectetur",
-      img: Adnan,
-    },
-    {
-      name: "Taif ",
-      role: "Frontend Developer",
-      message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iure minus veritatis voluptas tempora architecto nobis voluptates totam illum sunt? Minus asperiores fuga quae sequi placeat pariatur modi explicabo consectetur",
-      img: Taif
-    },
-  ];
 
+ useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    }, []);
   return (
     <section className="bg-[#121212] py-16">
-      <div className="container mx-auto px-4 text-center text-white">
+      <div className="container mx-auto px-4 text-center text-white"data-aos="zoom-in" data-aos-delay="200">
         <h2 className="text-3xl font-serif font-bold mb-8">What My Friends Say </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (

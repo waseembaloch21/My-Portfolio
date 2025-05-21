@@ -1,4 +1,6 @@
-import React from "react";
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import EventsApp from "../assets/images/Events-app.jpg";
 import Furniture from "../assets/images/Furniture.avif";
 // import TodoApp from "../assets/images/Todo-app.jpeg";
@@ -35,9 +37,17 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
+
+   useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    }, []);
+
   return (
 
-    <div id="projects" className="bg-[#121212] text-white py-10 px-5 mt-7 sm:px-20 md:px-32">
+    <div id="projects" className="bg-[#121212] text-white py-10 px-5 mt-7 sm:px-20 md:px-32" data-aos="zoom-in" data-aos-delay="200">
       <h2 className="text-3xl font-bold font-serif  mb-8 text-center">My Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
