@@ -14,7 +14,7 @@ const projects = [
       "The Event App is a modern FullStack app, responsive web application designed to help users discover, create, and manage events effortlessly.",
     image: EventsApp,
     link: "https://findfriend.vercel.app/",
-    technologies: ["Next Js", "Tailwind.CSS"],
+    technologies: ["Next Js", "Shad.Cn"],
   },
   {
     title: "Furniture Web",

@@ -11,7 +11,10 @@ const Contact = () => {
     const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.id]: e.target.value });
+        setFormData((prev) => ({
+            ...prev,
+            [e.target.id]: e.target.value,
+        }));
     };
 
     const sendEmail = async (e) => {
@@ -21,27 +24,22 @@ const Contact = () => {
         setIsError(false);
 
         try {
-            const res = await fetch('/api/send-email', {
+            const response = await fetch('/api/send-email', {
                 method: 'POST',
-                body: JSON.stringify(formData),
                 headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
             });
 
-            const data = await res.json();
+            const result = await response.json();
 
-            if (data.success) {
-                setStatus('Message sent successfully!');
+            if (result.success) {
+                setStatus('✅ Message sent successfully!');
                 setFormData({ name: '', email: '', message: '' });
-                setIsError(false);
             } else {
-                setStatus(`Failed to send: ${data.error}`);
-                setIsError(true);
+                setStatus(`❌ Failed to send: ${result.error}`);
             }
-        } catch (error) {
-            setStatus(`Error: ${error.message}`);
-            setIsError(true);
-        } finally {
-            setLoading(false);
+        } catch (err) {
+            setStatus(`❌ Error: ${err.message}`);
         }
     };
 
@@ -125,12 +123,10 @@ const Contact = () => {
                                 </>
                             )}
                         </button>
-                        {status && (
-                            <p className={`mt-3 sm:mt-4 text-sm ${isError ? 'text-red-400' : 'text-green-400'}`}>
-                                {status}
-                            </p>
-                        )}
+
+                        {status && <p className="text-sm mt-2">{status}</p>}
                     </form>
+
                 </div>
             </div>
         </div>
